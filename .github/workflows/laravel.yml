@@ -34,6 +34,7 @@ jobs:
         DB_DATABASE: database/database.sqlite
       run: vendor/bin/phpunit
     - name: run Lighthouse CI
-      run: |
-          npm install -g @lhci/cli@0.4.x
-          lhci autorun
+      uses: treosh/lighthouse-ci-action@v2
+      with: 
+        configPath:"./lighthouserc.json"
+    temporaryPublicStorage: true
