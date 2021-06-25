@@ -33,7 +33,15 @@ jobs:
         DB_CONNECTION: sqlite
         DB_DATABASE: database/database.sqlite
       run: vendor/bin/phpunit
-    - name: run Lighthouse CI
-      uses: treosh/lighthouse-ci-action@v2
-      with: 
-        configPath:"./lighthouserc.js"
+      - name: Use Node.js 10.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 10.x
+      - name: npm install, build
+        run: |
+          npm install
+          npm run build:prod
+      - name: run Lighthouse CI
+        run: |
+          npm install -g @lhci/cli@0.4.x
+          lhci autorun
