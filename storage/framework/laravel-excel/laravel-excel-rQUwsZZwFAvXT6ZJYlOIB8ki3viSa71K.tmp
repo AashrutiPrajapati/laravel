@@ -1,0 +1,9 @@
+sku,name,category,price,discount,quantity,description,status
+s1,vijay,laptop,1000,1,2,gaming,Disable
+s2,jay,sofa,95,1,2,see,Disable
+s3,dev,tvs,96,1,3,enjoy,Enable
+s4,ved,sofas,97,1,4,watching,Enable
+s5,vyas,tvh,98,1,5,see,Enable
+s6,anti,sofak,99,1,6,enjoy,Enable
+s7,shyam,tvl,100,1,7,watching,Enable
+s8,rishi,sofam,110,1,8,see,Disable
